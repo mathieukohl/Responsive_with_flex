@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+}
+
+.container {
+    /* display: flex :  
+    It enables Flexbox layout for the container element and its children. 
+    This means that the direct children of .container will become flexible boxes, 
+    allowing you to control their arrangement and alignment. */
+    display: flex;
+
+    /* flex-wrap: wrap : 
+    It determines how flex items behave when the container's width 
+    is not enough to accommodate all items on a single line. 
+    In this case, wrap allows the items to flow onto multiple lines, 
+    effectively wrapping them. */
+    flex-wrap: wrap;
+}
+
+.item {
+    /* flex-grow: 1 : 
+    It specifies how much the item should grow relative to the other items in the container. 
+    In this case, all items have a flex-grow value of 1, which means they will all 
+    grow equally if there is extra space available in the container. */
+    flex-grow: 1;
+
+    /* flex-basis: 300px : 
+    It defines the initial size of a flex item along the main axis 
+    before any remaining space is distributed. 
+    In this case, each item will have an initial width of 300px */
+    flex-basis: 300px;
+
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.item:nth-child(2n) {
+    background-color: #6610f2;
+}
+
+.item:nth-child(2n+1) {
+    background-color: #d63384; 
+}
